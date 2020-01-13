@@ -6,15 +6,10 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
- 
+import VueRouter from 'vue-router';
+import {routes} from './routes.js'
 
 window.Vue = require('vue');
-
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
 
 window.axios = require('axios');
 
@@ -34,31 +29,25 @@ if (token) {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 import VueSwal from 'vue-swal';
+
 Vue.use(VueSwal);
+Vue.use(VueRouter);
+
+//components registrations
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('student-page', require('./components/students/StudentPage.vue').default);
-Vue.component('clearance-validator', require('./components/clearancevalidator/ClearanceValidator.vue').default);
-//Vue.component('attribute-values', require('./components/AttributeValues.vue').default);
+Vue.component('product-component', require('./components/products/ProductComponent.vue').default);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+const router = new VueRouter({
+    mode:'history',
+    routes
+})
+
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });

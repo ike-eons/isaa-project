@@ -1,5 +1,6 @@
 <template>
-    <h2>I am in example component</h2>
+    
+    <router-link to="/customers">customers</router-link>
 </template>
 
 <script>

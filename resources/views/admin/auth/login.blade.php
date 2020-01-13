@@ -14,7 +14,7 @@
 </section>
 <section class="login-content">
     <div class="logo">
-        <img src="{{asset('images/frontend/anu-logo.png')}}">
+        <!-- <img src="{{asset('images/frontend/anu-logo.png')}}"> -->
     </div>
     <div class="login-box">
         <form class="login-form" action="{{ route('admin.login.post') }}" method="POST" role="form">

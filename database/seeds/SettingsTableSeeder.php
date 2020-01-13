@@ -11,23 +11,23 @@ class SettingsTableSeeder extends Seeder
     protected $settings = [
         [
             'key'                       =>  'site_name',
-            'value'                     =>  'Student Hall-Ticking System',
+            'value'                     =>  'Emmandjet Information System',
         ],
         [
             'key'                       =>  'site_title',
-            'value'                     =>  'Hall-Ticking System',
+            'value'                     =>  'EIS',
         ],
         [
             'key'                       =>  'default_email_address',
-            'value'                     =>  'admin@anuc.com',
+            'value'                     =>  'admin@admin.com',
         ],
         [
             'key'                       =>  'currency_code',
-            'value'                     =>  'Dollar',
+            'value'                     =>  'Cedi',
         ],
         [
             'key'                       =>  'currency_symbol',
-            'value'                     =>  '$',
+            'value'                     =>  'gh₵',
         ],
         [
             'key'                       =>  'site_logo',
@@ -73,30 +73,7 @@ class SettingsTableSeeder extends Seeder
             'key'                       =>  'facebook_pixels',
             'value'                     =>  '',
         ],
-        [
-            'key'                       =>  'stripe_payment_method',
-            'value'                     =>  '',
-        ],
-        [
-            'key'                       =>  'stripe_key',
-            'value'                     =>  '',
-        ],
-        [
-            'key'                       =>  'stripe_secret_key',
-            'value'                     =>  '',
-        ],
-        [
-            'key'                       =>  'paypal_payment_method',
-            'value'                     =>  '',
-        ],
-        [
-            'key'                       =>  'paypal_client_id',
-            'value'                     =>  '',
-        ],
-        [
-            'key'                       =>  'paypal_secret_id',
-            'value'                     =>  '',
-        ],
+       
     ];
 
     /**
