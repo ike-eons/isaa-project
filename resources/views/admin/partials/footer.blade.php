@@ -5,6 +5,8 @@
     <script src="{{ asset('backend/js/app.js') }}"></script>
     <script src="{{ asset('backend/js/plugins/pace.min.js') }}"></script>
     <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+    <script src="{{ asset('dist/js/adminlte.js') }}"></script>
+
     @stack('scripts')
 </body>
 </html>

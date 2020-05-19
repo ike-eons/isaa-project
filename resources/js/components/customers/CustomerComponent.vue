@@ -1,7 +1,6 @@
 <template>
         <div>
-            <h1>Customers</h1>
-            <router-link to="/customers">products</router-link>
+            <h1>Customers Component</h1>
         </div>
 </template>
 

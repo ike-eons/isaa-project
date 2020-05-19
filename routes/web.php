@@ -11,9 +11,7 @@
 |
 */
 
-Route::view('/', 'site.pages.homepage')->name('home');
-Route::get('user/{id}', 'UserController@show')->name('auth.clearance');
-Route::get('user/{id}/hallticket/{student}', 'UserController@print')->name('auth.hallticket');
+Route::view('/', redirect('/admin'))->name('home');
 
 
 

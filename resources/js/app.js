@@ -6,14 +6,27 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
-import VueRouter from 'vue-router';
-import {routes} from './routes.js'
+
+import router from './router/index.js'
+import bar from './components/progress'
+import store from './store/index.js';
+import moment from 'moment';
+import Chartkick from 'vue-chartkick';
+import Chart from 'chart.js';
+import Vue from 'vue';
+
+Vue.use(Chartkick.use(Chart));
+
 
 window.Vue = require('vue');
 
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+Vue.filter('datetime',function(created){
+    return moment(created).format('MMMM Do YYYY, h:mm:ss a');
+ });
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
@@ -29,25 +42,33 @@ if (token) {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
+router.beforeEach((to, from, next) => {
+    bar.start()
+    next()
+  });
 
-
-import VueSwal from 'vue-swal';
-
-Vue.use(VueSwal);
-Vue.use(VueRouter);
+Vue.filter('formatMoney', (value) => {
+return Number(value)
+    .toFixed(2)
+    .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+})
 
 //components registrations
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('product-component', require('./components/products/ProductComponent.vue').default);
+Vue.component('invoice-index', require('./components/invoices/InvoiceIndex.vue').default);
+Vue.component('invoice-form', require('./components/invoices/InvoiceForm.vue').default);
+Vue.component('add-stock',require('./components/stocks/AddStock.vue').default);
+Vue.component('stock-form',require('./components/stocks/StockForm.vue').default);
+Vue.component('bar-chart',require('./components/customers/BarChart.vue').default);
+Vue.component('line-chart',require('./components/analytics/LineChart.vue').default);
+Vue.component('horinzontal-chart',require('./components/analytics/HorinzontalChart.vue').default);
+Vue.component('stock-intake',require('./components/dashboard/StockIntakeChart.vue').default);
 
-const router = new VueRouter({
-    mode:'history',
-    routes
-})
 
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store
 });
