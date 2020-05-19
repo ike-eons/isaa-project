@@ -3,7 +3,7 @@
 @section('content')
     <div class="app-title">
         <div>
-            <h1><i class="fa fa-line-chart"></i>&nbsp;Invoices</h1>
+            <h1><i class="fa fa-line-chart"></i>&nbsp;&nbsp;Invoices</h1>
             <p>List of All Invoices</p>
         </div>
     <a href="{{ route('admin.invoices.create') }}" class="btn btn-primary pull-right">Create Invoice</a>
