@@ -10,7 +10,7 @@ use App\Models\Product;
 use App\Models\Brand;
 use App\Models\Category;
 
-use Illumintate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends BaseController
 {
@@ -70,7 +70,8 @@ class ProductController extends BaseController
             'brand_id'                  =>  'required|integer',
             'name'                      =>  'required|unique:products',
             'weight'                    =>  'required|numeric',
-            'price'                     =>  'required|numeric',
+            'stock_price'               =>  'required|numeric',
+            'sales_price'               =>  'required|numeric',
             'carton_quantity'           =>  'numeric'
         ]);
 
@@ -98,23 +99,29 @@ class ProductController extends BaseController
         $product = $this->productRepository->listProducts();
 
         $this->setPageTitle('Product', 'Edit product : '.$targetProduct->product_name);
+
         return view('admin.products.edit', compact('product', 'targetProduct'));
     }
 
     public function update(Request $request)
     {
-         $this->validate($request, [
-            'category_id'               =>  'required|integer',
-            'brand_id'                  =>  'required|integer',
-            'name'                      =>  'required|unique:products',
-            'weight'                    =>  'required',
-            'price'                     =>  'required',
-            'carton_quantity'           =>  'required|numeric'
-        ]);
+
+        //  $request->validate([
+        //     'category_id'               =>  'required|integer',
+        //     'brand_id'                  =>  'required|integer',
+        //     'name'                      =>  'required',
+        //     'weight'                    =>  'required',
+        //     'stock_price'               =>  'required|numeric',
+        //     'sales_price'               =>  'required|numeric',
+        //     'carton_quantity'           =>  'required|numeric'
+        // ]);
 
         $params = $request->except('_token');
 
+        // dd($params);
+
         $product = $this->productRepository->updateProduct($params);
+        
 
         if (!$product) {
             return $this->responseRedirectBack('Error occurred while updating product.', 'error', true, true);
@@ -125,7 +132,10 @@ class ProductController extends BaseController
 
      public function delete($id)
     {
+        DB::table('inventories')->where('product_id', $id)->delete();
+
         $product = $this->productRepository->deleteProduct($id);
+        // dd($product);
 
         if (!$product) {
             return $this->responseRedirectBack('Error occurred while deleting product.', 'error', true, true);

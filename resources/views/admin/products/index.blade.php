@@ -20,7 +20,8 @@
                                 <th style="min-width:80px">Name</th>
                                 <th>Description</span></th>
                                 {{-- <th>Quantity <span class="text-danger">( /carton )</span></th> --}}
-                                <th>Price <span class="text-danger">( GH¢ )</span></th>
+                                <th>Stock Price <span class="text-danger">( GH¢ )</span></th>
+                                <th>Sales Price <span class="text-danger">( GH¢ )</span></th>
                                 <th>Category</th>
                                 <th>Brand</th>
                                 <th style="width:80px; min-width:60px;" class="text-center text-danger"><i class="fa fa-bolt"> </i></th>
@@ -33,7 +34,8 @@
                                         <td><a href="#" >{{ $product->name }}</a></td>
                                         {{-- <td>{{ $product->weight }} <span class="text-bold">g</span></td> --}}
                                         <td>{{ $product->getProductDescription() }}</td>
-                                        <td class="text-success">GH¢&nbsp;{{number_format($product->price,2)}}</td>
+                                        <td class="text-success">GH¢&nbsp;{{number_format($product->stock_price,2)}}</td>
+                                        <td class="text-info">GH¢&nbsp;{{number_format($product->sales_price,2)}}</td>
                                         <td>{{ $product->category->name }}</td>
                                         <td>{{ $product->brand->name }}</td>
                                         

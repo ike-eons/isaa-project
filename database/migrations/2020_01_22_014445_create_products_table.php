@@ -17,7 +17,8 @@ class CreateProductsTable extends Migration
             $table->string('name')->unique();
             $table->integer('weight');
             $table->integer('carton_quantity');
-            $table->decimal('price', 8, 2)->nullable();
+            $table->decimal('stock_price', 8, 2)->nullable();
+            $table->decimal('sales_price', 8, 2)->nullable();
 
             $table->foreign('brand_id')->references('id')->on('brands');
             $table->foreign('category_id')->references('id')->on('categories');

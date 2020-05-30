@@ -219,7 +219,7 @@ export default {
          Vue.set(this.form.stock_items[this.index], 'product_id',product.id, 
                    Vue.set(this.form.stock_items[this.index], 'product', product))
 
-         Vue.set(this.form.stock_items[this.index], 'price', parseFloat(product.price))
+         Vue.set(this.form.stock_items[this.index], 'price', parseFloat(product.stock_price))
       },
       distributorSelected(distributor){
          this.$set(this.$data.form,'distributor',distributor);

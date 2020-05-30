@@ -34,16 +34,19 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="price"> Price <span class="m-l-5 text-danger"> *( price/carton )</span></label>
-                            <input class="form-control @error('price') is-invalid @enderror" type="number" step=".01" name="price" id="price" value="{{ old('price') }}"/>
-                            <span class="text-danger">@error('price') {{ $message }} @enderror</span>
+                            <label class="control-label" for="stock_price"> Stock Price <span class="m-l-5 text-danger"> *( price/carton )</span></label>
+                            <input class="form-control @error('stock_price') is-invalid @enderror" type="number" step=".01" name="stock_price" id="stock_price" value="{{ old('stock_price') }}"/>
+                            <span class="text-danger">@error('stock_price') {{ $message }} @enderror</span>
                         </div>
 
-                        {{-- <div class="form-group">
-                            <label class="control-label" for="brand">Product Brand <span class="m-l-5 text-danger"> *</span></label>
-                            <input class="form-control @error('brand') is-invalid @enderror" type="text" name="brand_id" id="price_id" value="{{ old('brand_id') }}"/>
-                            <span class="text-danger">@error('brand') {{ $message }} @enderror</span>
-                        </div> --}}
+                        <div class="form-group">
+                            <label class="control-label" for="sales_price"> Sales Price <span class="m-l-5 text-danger"> *( price/carton )</span></label>
+                            <input class="form-control @error('sales_price') is-invalid @enderror" 
+                                type="number" step=".01" name="sales_price" 
+                                id="sales_price" value="{{ old('sales_price') }}"
+                            />
+                            <span class="text-danger">@error('sales_price') {{ $message }} @enderror</span>
+                        </div>
 
                         <div class="form-group">
                             <label class="control-label" for="brand">Product Brand <span class="m-l-5 text-danger"> *</span></label>

@@ -16,7 +16,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Ideal Milk SM',
             'weight'            =>  160,
             'carton_quantity'   =>  24,
-            'price'  =>  66.00,
+            'stock_price'       =>  66.00,
+            'sales_price'       => 66.50
         ],
         [
             'id'                =>  2,
@@ -26,7 +27,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Ideal Milk BG',
             'weight'            =>  390,
             'carton_quantity'   =>  24,
-            'price'  =>  145.00,
+            'stock_price'       =>  145.00,
+            'sales_price'       =>  156.00
             
         ],
         [
@@ -37,7 +39,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Carnation Tea Creamer',
             'weight'            =>  160,
             'carton_quantity'   =>  24,
-            'price'  =>  56.00,
+            'stock_price'       =>  56.00,
+            'sales_price'       => 56.00
             
         ],
         [
@@ -48,7 +51,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Nido Tin',
             'weight'            =>  400,
             'carton_quantity'   =>  12,
-            'price'  =>  312,
+            'stock_price'       =>  312,
+            'sales_price'       => 314,
         ],
         [
             'id'                =>  5,
@@ -58,7 +62,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Nido Plus One(+1)',
             'weight'            =>  400,
             'carton_quantity'   =>  12,
-            'price'  =>  319.00,
+            'stock_price'       =>  319.00,
+            'sales_price'       => 320,
         ],
         [
             'id'                =>  6,
@@ -68,7 +73,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Nido Essential Small(SM)',
             'weight'            =>  26,
             'carton_quantity'   =>  120,
-            'price'  =>  178.00,
+            'stock_price'       =>  178.00,
+            'sales_price'       => 179.00,
         ],
         [
             'id'                =>  7,
@@ -78,7 +84,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Nido Pillow',
             'weight'            =>  365,
             'carton_quantity'   =>  12,
-            'price'  =>  176.00,
+            'stock_price'       =>  176.00,
+            'sales_price'       => 177,
         ],
         [
             'id'                =>  8,
@@ -88,17 +95,19 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Milo Tin',
             'weight'            =>  400,
             'carton_quantity'   =>  12,
-            'price'  =>  178.00,
+            'stock_price'       =>  178.00,
+            'sales_price'       =>  179.00,
         ],
         [
             'id'                =>  9,
             'brand_id'          =>  1,
             'category_id'       =>  2,
-            'description'               =>  '',
+            'description'       =>  '',
             'name'              =>  'Milo(800)',
             'weight'            =>  800,
             'carton_quantity'   =>  8,
-            'price'  =>  292.00,
+            'stock_price'       =>  292.00,
+            'sales_price'       =>  293.00
         ],
         [
             'id'                =>  10,
@@ -108,7 +117,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Milo Soft Pack',
             'weight'            =>  400,
             'carton_quantity'   =>  10,
-            'price'  =>  161.00,
+            'stock_price'       =>  161.00,
+            'sales_price'       => 162.00,
         ],
         [
             'id'                =>  11,
@@ -118,7 +128,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Milo All in One',
             'weight'            =>  40,
             'carton_quantity'   =>  200,
-            'price'  =>  264.00,
+            'stock_price'       =>  264.00,
+            'sales_price'       =>  265.00,
         ],
         [
             'id'                =>  12,
@@ -128,7 +139,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Cocolim(500)',
             'weight'            =>  500,
             'carton_quantity'   =>  20,
-            'price'  =>  210.00,
+            'stock_price'       =>  211.00,
+            'sales_price'       => 212.00
         ],
         [
             'id'                =>  13,
@@ -138,7 +150,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Cocolim(1Kg)',
             'weight'            =>  1000,
             'carton_quantity'   =>  12,
-            'price'  =>  240.00,
+            'stock_price'       =>  240.00,
+            'sales_price'       => 242.00
         ],
         [
             'id'                =>  14,
@@ -148,7 +161,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Milo Energy Cube',
             'weight'            =>  137.5,
             'carton_quantity'   =>  40,
-            'price'  =>  160.00,
+            'stock_price'  =>  160.00,
+            'sales_price'       => 162.00,
         ],
         [
             'id'                =>  15,
@@ -158,7 +172,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Lactogen 1',
             'weight'            =>  400,
             'carton_quantity'   =>  24,
-            'price'  =>  536.00,
+            'stock_price'       =>  536.00,
+            'sales_price'       => 537.00
         ],
         [
             'id'                =>  16,
@@ -168,7 +183,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Lactogen 2',
             'weight'            =>  400,
             'carton_quantity'   =>  24,
-            'price'  =>  536.00,
+            'stock_price'       =>  536.00,
+            'sales_price'       => 536.00
         ],
         [
             'id'                =>  17,
@@ -178,7 +194,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'NAN 1 Optipro NWBO19',
             'weight'            =>  400,
             'carton_quantity'   =>  12,
-            'price'  =>  378.00,
+            'stock_price'       =>  378.00,
+            'sales_price'       => 379.00
         ],
         [
             'id'                =>  18,
@@ -188,7 +205,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'NAN 2 OptiproL WB',
             'weight'            =>  400,
             'carton_quantity'   =>  12,
-            'price'  =>  378.00,
+            'stock_price'       =>  378.00,
+            'sales_price'       => 379.00
         ],
         [
             'id'                =>  19,
@@ -198,7 +216,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Maggie Shrimp Tab',
             'weight'            =>  600,
             'carton_quantity'   =>  24,
-            'price'  =>  255.00,
+            'stock_price'       =>  255.00,
+            'sales_price'       =>  256.00
         ],
         [
             'id'                =>  20,
@@ -208,7 +227,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Maggie Shrimp Enapa',
             'weight'            =>  600,
             'carton_quantity'   =>  24,
-            'price'  =>  265.00,
+            'stock_price'       =>  265.00,
+            'sales_price'       =>  266.00
         ],
         [
             'id'                =>  21,
@@ -218,7 +238,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Nestcafe Stick',
             'weight'            =>  240,
             'carton_quantity'   =>  9,
-            'price'  =>  498.00,
+            'stock_price'       =>  498.00,
+            'sales_price'       =>  499.00
         ],
         [
             'id'                =>  22,
@@ -228,7 +249,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Nestcafe 3-in-1 Breakfast',
             'weight'            =>  288,
             'carton_quantity'   =>  10,
-            'price'  =>  498.00,
+            'stock_price'       =>  498.00,
+            'sales_price'       => 499.00
         ],
         [
             'id'                =>  23,
@@ -238,7 +260,8 @@ class ProductTableSeeder extends Seeder
             'name'              =>  'Cerelac Wheat',
             'weight'            =>  50,
             'carton_quantity'   =>  80,
-            'price'  =>  123.00,
+            'stock_price'       =>  123.00,
+            'sales_price'       =>  124.00
         ],
         
        

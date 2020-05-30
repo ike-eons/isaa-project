@@ -10,11 +10,11 @@ class CustomersTableSeeder extends Seeder
     
         [
             'id'                =>  1,
-            'firstname'      => 'Ben',
-            'lastname'           => 'Yeboah',
-            'phone'             => '0550934305',
-            'shop_name'             => 'B-Yagola Shop',
-            'shop_address'             => 'Sego-Lane, Adum-Kumasi'
+            'firstname'      => 'Unknown',
+            'lastname'           => 'Unknown',
+            'phone'             => '0000000000',
+            'shop_name'             => 'Unkown',
+            'shop_address'             => 'Unknown'
         ],
         [
             'id'                =>  2,

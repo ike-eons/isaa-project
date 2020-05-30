@@ -21,6 +21,7 @@
                                 type="text" name="name" id="name" 
                                 value="{{ old('name',$targetProduct->name) }}"
                             />
+                            <input type="hidden" name="id" value="{{ $targetProduct->id }}">
                             <span class="text-danger">@error('name') {{ $message }} @enderror</span>
                         </div>
 
@@ -34,12 +35,21 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label" for="price">Product Price <span class="m-l-5 text-danger"> *</span></label>
-                            <input class="form-control @error('price') is-invalid @enderror" 
-                                type="number" name="price" id="name" 
-                                value="{{ old('price',$targetProduct->price) }}"
+                            <label class="control-label" for="stock_price">Stock Price <span class="m-l-5 text-danger"> *</span></label>
+                            <input class="form-control @error('stock_price') is-invalid @enderror" 
+                                type="number" step="0.01" name="stock_price" id="name" 
+                                value="{{ old('stock_price',$targetProduct->stock_price) }}"
                             />
-                            <span class="text-danger">@error('price') {{ $message }} @enderror</span>
+                            <span class="text-danger">@error('stock_price') {{ $message }} @enderror</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label" for="sales_price">Sales Price <span class="m-l-5 text-danger"> *</span></label>
+                            <input class="form-control @error('sales_price') is-invalid @enderror" 
+                                type="number" step="0.01" name="sales_price" id="name" 
+                                value="{{ old('sales_price',$targetProduct->sales_price) }}"
+                            />
+                            <span class="text-danger">@error('sales_price') {{ $message }} @enderror</span>
                         </div>
 
                         <div class="form-group">
