@@ -47,9 +47,9 @@
                                         @foreach ($stock->stock_items as $item)
                                         <tr>
                                             <td>{{ $item->product->description }}</td>
-                                            <td> GH¢&nbsp;{{ number_format($item->product->price) }}</td>
+                                            <td> GH¢&nbsp;{{ number_format($item->product->stock_price) }}</td>
                                             <td>{{$item->quantity}}</td>
-                                            <td> GH¢&nbsp;{{ number_format($item->product->price * $item->quantity) }}</td>
+                                            <td> GH¢&nbsp;{{ number_format($item->product->stock_price * $item->quantity) }}</td>
                                         </tr>
                                         @endforeach
                                       

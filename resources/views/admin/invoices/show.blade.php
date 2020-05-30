@@ -57,9 +57,9 @@
                                         @foreach ($invoice->invoice_items as $item)
                                         <tr>
                                             <td>{{ $item->product->getTextAttribute() }}</td>
-                                            <td> GH¢ {{ number_format($item->product->price,2) }}</td>
+                                            <td> GH¢ {{ number_format($item->product->sales_price,2) }}</td>
                                             <td>{{$item->quantity}}</td>
-                                            <td> GH¢ {{ number_format($item->product->price * $item->quantity,2) }}</td>
+                                            <td> GH¢ {{ number_format($item->product->sales_price * $item->quantity,2) }}</td>
                                         </tr>
                                         @endforeach
                                       
@@ -68,7 +68,7 @@
                                 </div>
 
                                 <div class="col-md-4 offset-md-8 text-center">
-                                    <h5 style="border: 1px #e5e5e5 solid; padding:5px 0px">Total: GH¢&nbsp; {{number_format($invoice->total)}}</h5>
+                                    <h5 style="border: 1px #e5e5e5 solid; padding:5px 0px">Total: GH¢&nbsp; {{number_format($invoice->total,2)}}</h5>
                                 </div>
                               </div>
                         </div>
